@@ -44,7 +44,7 @@ interface MailProps {
   navCollapsedSize: number;
 }
 
-export function Mail({
+export function Mails({
   accounts,
   mails,
   defaultLayout = [265, 440, 655],
@@ -71,12 +71,12 @@ export function Mail({
           collapsible={true}
           minSize={15}
           maxSize={20}
-          onCollapse={(collapsed) => {
-            setIsCollapsed(collapsed);
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
-              collapsed,
-            )}`;
-          }}
+          // onCollapse={(collapsed) => {
+          //   setIsCollapsed(collapsed);
+          //   document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
+          //     collapsed,
+          //   )}`;
+          // }}
           className={cn(
             isCollapsed &&
               "min-w-[50px] transition-all duration-300 ease-in-out",
